@@ -62,26 +62,29 @@
                     </button>
                     <form >
                         <div role="group" class="modal-group"> 
-                           <ul class="list-modal-group list">
-                                <li><p class="list-modal-group-p">Залиште свої дані, ми вам передзвонимо</p></li>
-                                <li class="list-modal-group-item">
-                                    <label for="user-name">Ім'я</label>
-                                <input class="list-modal-group-input" type="text" name="user-name" id="user-name"></li>
-                                <li class="list-modal-group-item">
-                                    <label for="phone_number">Телефон</label>
-                                <input class="list-modal-group-input" type="tel" name="phone_number" id="phone_number"></li>
-                                <li class="list-modal-group-item">
-                                    <label for="email_user">Пошта</label>
-                                <input class="list-modal-group-input" type="email" name="email_user" id="email_user"></li>
-                                <li class="list-modal-group-coment">
-                                    <label for="comment">Коментар</label>
-                                <textarea class="list-modal-group-input comment" name="comment" id="comment"></textarea></li>
-                                <li class="list-modal-group-policy"><input type="checkbox" name="policy" id="policy">
-                                <label for="policy">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a> </label></li>
-                                <li><button type="submit">
+                           
+                                <p class="list-modal-group-p">Залиште свої дані, ми вам передзвонимо</p>
+                            <div>    
+                                <label class="list-modal-group-label" for="user-name">Ім'я</label>
+                                <input class="list-modal-group-input" type="text" name="user-name" id="user-name">
+                            </div>
+                                <label class="list-modal-group-label" for="phone_number">Телефон</label>
+                                <input class="list-modal-group-input" type="tel" name="phone_number" id="phone_number">
+                            <div>     
+                                <label class="list-modal-group-label" for="email_user">Пошта</label>
+                                <input class="list-modal-group-input" type="email" name="email_user" id="email_user">
+                            </div>
+                                <label class="list-modal-group-label" for="comment">Коментар</label>
+                                <textarea class="list-modal-group-input comment" name="comment" id="comment"></textarea>
+                            <div class="modal-group-checkbox">
+                                <input type="checkbox" name="policy" id="policy">
+                                <label for="policy">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a> </label>
+                            </div>
+                            <div>    
+                                <button class="modal-group-button" type="submit">
                                     Відправити
-                                </button></li>
-                           </ul>
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
