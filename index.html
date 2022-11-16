@@ -63,23 +63,42 @@
                     <form >
                         <div role="group" class="modal-group"> 
                            
-                                <p class="list-modal-group-p">Залиште свої дані, ми вам передзвонимо</p>
-                            <div>    
-                                <label class="list-modal-group-label" for="user-name">Ім'я</label>
-                                <input class="list-modal-group-input" type="text" name="user-name" id="user-name">
+                                <p class="modal-group-p">Залиште свої дані, ми вам передзвонимо</p>
+                            <div class="modal-group-item">    
+                                <label class="modal-group-label" for="user-name">Ім'я</label>
+                                <input class="modal-group-input" type="text" name="user-name" id="user-name">
+                                <svg class="modal-icon" width="18" height="18">
+                                    <use href="./images/icons.svg#icon-person"></use>
+                                </svg>
                             </div>
-                                <label class="list-modal-group-label" for="phone_number">Телефон</label>
-                                <input class="list-modal-group-input" type="tel" name="phone_number" id="phone_number">
-                            <div>     
-                                <label class="list-modal-group-label" for="email_user">Пошта</label>
-                                <input class="list-modal-group-input" type="email" name="email_user" id="email_user">
+
+                            <div class="modal-group-item">
+                                <label class="modal-group-label" for="phone_number">Телефон</label>
+                                <input class="modal-group-input" type="tel" name="phone_number" id="phone_number">
+                                <svg class="modal-icon" width="18" height="18">
+                                    <use href="./images/icons.svg#icon-phone"></use>
+                                </svg>
                             </div>
-                                <label class="list-modal-group-label" for="comment">Коментар</label>
-                                <textarea class="list-modal-group-input comment" name="comment" id="comment"></textarea>
+
+                            <div class="modal-group-item">     
+                                <label class="modal-group-label" for="email_user">Пошта</label>
+                                <input class="modal-group-input" type="email" name="email_user" id="email_user">
+                                <svg class="modal-icon" width="18" height="18">
+                                    <use href="./images/icons.svg#icon-email"></use>
+                                </svg>
+                            </div>
+
+                                <label class="modal-group-label" for="comment">Коментар</label>
+                                <textarea class="modal-group-input comment" name="comment" id="comment" placeholder="Введіть текст"></textarea>
+
                             <div class="modal-group-checkbox">
-                                <input type="checkbox" name="policy" id="policy">
-                                <label for="policy">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a> </label>
+                                <input class="input-polisy-hidden" type="checkbox" name="policy" id="policy">
+                                <label class="label-polisy-hidden" for="policy">Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a> </label>
+                                <svg class="modal-icon-cvadrat" width="18" height="18">
+                                    <use href="./images/icons.svg#icon-cvadrat"></use>
+                                </svg>
                             </div>
+
                             <div>    
                                 <button class="modal-group-button" type="submit">
                                     Відправити
@@ -456,6 +475,26 @@
                                 <use href="./images/icons.svg#icon-linkedin"></use>
                             </svg>
                         </a>
+                    </div>
+                </div>
+                <div class="footer-form">
+                    <p class="footer-p">
+                      Підпишіться на розсилку
+                    </p>
+                    <div role="group">
+                        <form>
+                            <div>
+                                <label for="email-user">E-mail</label>
+                                <input type="email" name="email-user" id="email-user">
+                            
+                                <button type="submit">
+                                    Підписатися
+                                </button>
+                            </div>
+                            
+                                
+                            
+                        </form>
                     </div>
                 </div>
         </div>
