@@ -211,7 +211,7 @@ background: rgba(0, 0, 0, 0.2);
 /* Стилі модального вікна */
 
 .backdrop.is-hidden {
-opacity: 0;
+opacity: 1;
 pointer-events: none;
 }
 
@@ -220,30 +220,32 @@ pointer-events: none;
     display: flex;
     align-items: center;
     justify-content: center;
-        right: 10px;
-        top: 10px;
-        width: 30px;
-        height: 30px;
-        background: #FFFFFF;
-        border-radius: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        cursor: pointer;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .modal-group {
-    /* position: relative;   */
+    display: flex;
+    flex-direction: column;
     padding: 40px;
+    max-width: 528px;
+    max-height: 581px;
 }
 
 .modal-group-p {
     margin-bottom: 30px;
     font-weight: 700;
-        font-size: 20px;
-        line-height: calc(23/20);
-        text-align: center;
-        letter-spacing: 0.03em;
-    
-        color: #212121;
+    font-size: 20px;
+    line-height: calc(23/20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
 }
 
 .modal-group-label {
@@ -257,6 +259,7 @@ pointer-events: none;
 .modal-group-input {
     width: 448px;
     height: 35px;
+    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     margin-bottom: 10px;
@@ -264,13 +267,15 @@ pointer-events: none;
 
 .comment {
     height: 120px;
+    min-width: 448px;
     margin-bottom: 20px;
+    padding: 12px 16px;
     resize: none;
     font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.01em;
+    line-height: 14px;
+    letter-spacing: 0.01em;
     
-        color: rgba(117, 117, 117, 0.5);
+    color: rgba(117, 117, 117, 0.5);
 }
 
 
@@ -304,7 +309,7 @@ pointer-events: none;
     top: 27px;
 }
 
-.modal-group-input:hover + .modal-icon {
+.modal-group-input:hover + .modal-icon, .modal-group-input:focus+.modal-icon {
    fill: var(--accent-color);
    
 }
@@ -330,15 +335,12 @@ pointer-events: none;
     margin-left: 40px;
     
     width: 400px;
-        height: 24px;
-        
-        font-size: 14px;
-        line-height: calc(24/14);
+    height: 24px;
        
-    
-        letter-spacing: 0.03em;
-    
-        color: var(--color-body-second)
+    font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    color: var(--color-body-second)
 }
 
 /* Завершення стилів для чекбоксу */
@@ -731,9 +733,9 @@ pointer-events: none;
 
 .footer-button {
     margin-left: 12px;
-    /* padding-left: 28px; */
+    padding-left: 28px;
     padding-right: 62px;
-    width: 200px;
+    max-width: 200px;
     height: 50px;
     font-weight: 700;
         font-size: 16px;
@@ -745,6 +747,7 @@ pointer-events: none;
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .footer-form-div {
@@ -754,35 +757,21 @@ pointer-events: none;
     align-items: center;
 }
 
-.footer-form-label {
-    position: absolute;
-    left: 0%;
-    top: 50%;
-    width: 47px;
-    height: 20px;
-    
-  
-    font-size: 16px;
-    line-height: calc(20/16);
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
-
 .footer-form-input {
     width: 358px;
     height: 50px;
-    
+    padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    
+    background: #2F303A;
 } 
 
 .icon-send {
     position: absolute;
-       top: 13px;
-       right: 28px;    
-        fill: #FFFFFF;
+    top: 13px;
+    right: 28px;    
+    fill: #FFFFFF;
 }
 
 
