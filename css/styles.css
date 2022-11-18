@@ -1,6 +1,6 @@
 /* general styses */
 
-/* html {box-sizing: border-box;} */
+html {box-sizing: border-box;}
 
 *,
 *::before,
@@ -42,6 +42,24 @@ color: var(--color-body);
 }
 
 img {display: block;}
+
+label {
+    margin: 0;
+    padding: 0;
+    border: 0;    
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
 /* Reset end  */
 
@@ -211,7 +229,7 @@ background: rgba(0, 0, 0, 0.2);
 /* Стилі модального вікна */
 
 .backdrop.is-hidden {
-opacity: 1;
+opacity: 0;
 pointer-events: none;
 }
 
@@ -230,16 +248,20 @@ pointer-events: none;
     cursor: pointer;
 }
 
+.modal {
+    padding: 40px;
+    width: 528px;
+    height: 581px;
+}
+
 .modal-group {
     display: flex;
     flex-direction: column;
-    padding: 40px;
-    max-width: 528px;
-    max-height: 581px;
+    
 }
 
-.modal-group-p {
-    margin-bottom: 30px;
+.tytle-p {
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
     line-height: calc(23/20);
@@ -248,8 +270,14 @@ pointer-events: none;
     color: #212121;
 }
 
+.modal-group-item {
+    position: relative;
+}
+
 .modal-group-label {
+    display: block;
     margin-bottom: 4px;
+    font-weight: 400;
     font-size: 12px;
     line-height: calc(14/12);
     letter-spacing: 0.01em;
@@ -257,25 +285,31 @@ pointer-events: none;
 }
 
 .modal-group-input {
+    
     width: 448px;
-    height: 35px;
+    height: 40px;
+    margin-bottom: 10px;
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-bottom: 10px;
+
 }
 
 .comment {
+    width: 448px;
     height: 120px;
-    min-width: 448px;
     margin-bottom: 20px;
     padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
     resize: none;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
+
+    font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
     
-    color: rgba(117, 117, 117, 0.5);
+        color: rgba(117, 117, 117, 0.5);
 }
 
 
@@ -299,9 +333,7 @@ pointer-events: none;
     cursor: pointer;
 }
 
-.modal-group-item {
-    position: relative;
-}
+
 
 .modal-icon {
     position: absolute;
@@ -317,14 +349,13 @@ pointer-events: none;
 /* Стилі для чекбоксу */
 
 .modal-group-checkbox {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
 .modal-icon-cvadrat {
-    position: absolute;
-    top: 0px;
-    left: 16px;
 }
 
 .input-polisy-hidden {
