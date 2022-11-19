@@ -198,7 +198,7 @@ section {
     margin-left: auto;
     margin-right: auto;
     max-width: 1600px;
-    
+    border: none;
 }
 
 .backdrop {
@@ -246,6 +246,10 @@ pointer-events: none;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+.icon-close-button:hover .icon-close-button-svg, .icon-close-button:focus .icon-close-button-svg{
+    fill: #2196F3;
 }
 
 .modal {
@@ -341,10 +345,13 @@ pointer-events: none;
     top: 27px;
 }
 
+.modal-group-input:hover, .modal-group-input:focus {
+border: 1px solid #2196F3;
+}
+
 .modal-group-input:hover + .modal-icon, .modal-group-input:focus+.modal-icon {
    fill: var(--accent-color);
-   
-}
+   }
 
 /* Стилі для чекбоксу */
 
@@ -360,7 +367,7 @@ pointer-events: none;
     appearance: none;
     width: 16px;
     height: 15px;
-    
+    margin-left: 12px;
     border: 1px solid #212121;
     border-radius: 4px;
 
@@ -368,15 +375,18 @@ pointer-events: none;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 0;
-    transition: 250 cubic-bezier(0.4, 0, 0.2, 1);
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-polisy:checked {
+    background-size: 16px 15px; transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-polisy {
     
-    
     width: 100%;
     height: 24px;
-    /* padding-left: 37px;    */
+    margin-left: 10px;
     font-size: 14px;
     line-height: calc(24/14);
     letter-spacing: 0.03em;
@@ -387,9 +397,7 @@ pointer-events: none;
     color: #2196F3;
 }
 
-.input-polisy:checked {
-    background-size: contain;
-}
+
 
 /* Завершення стилів для чекбоксу */
 
@@ -699,6 +707,7 @@ pointer-events: none;
     display: flex;
     gap: 70px;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 .footer-p {
@@ -795,6 +804,7 @@ pointer-events: none;
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    border: none;
     cursor: pointer;
 }
 
@@ -813,6 +823,7 @@ pointer-events: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background: #2F303A;
+    color: rgba(255, 255, 255, 0.6);
 } 
 
 .icon-send {
